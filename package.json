@@ -1,0 +1,15 @@
+{
+  "name": "canopy-api-docs",
+  "version": "1.0.0",
+  "repository": "git@github.com:canopy-study/canopy-api-docs.git",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.27",
+    "vue": "^3.2.41"
+  }
+}
