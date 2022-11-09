@@ -1,5 +1,5 @@
 export default {
-  // base: "canopy-api-docs",
+  base: "/canopy-api-docs/",
   title: "Canopy Study API Docs",
   description: "Canopy Study API documentation.",
   lastUpdated: true,
