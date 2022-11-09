@@ -152,7 +152,7 @@ A number between `0.0` and `1.0`, representing the completion of creating questi
 
 ```json
 {
-    "pipeline_tracker_id": "pyWXj3N9eSKMuQPzOwix",
+    "id": "pyWXj3N9eSKMuQPzOwix",
     "progress": 0.5
 }
 ```
@@ -196,24 +196,29 @@ A list of incorrect answers. Great for multiple choice questions.
 #### Example
 
 ```json
-[
-    {
-        "question": "True crows belong to what group?",
-        "answer": "The answer, but clean",
-        "distractors": [
-            "Verbal responses are made to verbal stimuli",
-            "A familiar response is associated with a new stimulus",
-            "Individual associations are linked together in sequence"
-        ]
-    },
-    {
-        "question": "True crows belong to what group?",
-        "answer": "The answer, but clean",
-        "distractors": [
-            "Verbal responses are made to verbal stimuli",
-            "A familiar response is associated with a new stimulus",
-            "Individual associations are linked together in sequence"
-        ]
-    }
-]
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+      {
+          "question": "True crows belong to what group?",
+          "answer": "The answer, but clean",
+          "distractors": [
+              "Verbal responses are made to verbal stimuli",
+              "A familiar response is associated with a new stimulus",
+              "Individual associations are linked together in sequence"
+          ]
+      },
+      {
+          "question": "True crows belong to what group?",
+          "answer": "The answer, but clean",
+          "distractors": [
+              "Verbal responses are made to verbal stimuli",
+              "A familiar response is associated with a new stimulus",
+              "Individual associations are linked together in sequence"
+          ]
+      }
+    ]
+}
 ```
