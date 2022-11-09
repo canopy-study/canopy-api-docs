@@ -1,5 +1,4 @@
 export default {
-  base: "/docs/",
   title: "Canopy Study API Docs",
   description: "Canopy Study API documentation.",
   lastUpdated: true,
