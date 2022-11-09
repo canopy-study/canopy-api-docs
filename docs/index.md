@@ -103,31 +103,30 @@ curl https://api.canopy.study/api/questions/ \
 
 ### Response
 
-A tracker object.
+A pipeline tracker object.
 
-`id` <Badge type="info" text="string" />
+`pipeline_tracker_id` <Badge type="info" text="string" />
 
 The identifier for requesting updates on the progress of creating questions.
 
 `progress` <Badge type="info" text="float" />
 
 A number between `0.0` and `1.0`, representing the completion of creating questions. `1.0` represents a successful completion, where-as `-1.0` represents a failure to create questions.
+
+#### Example
+
+```json
+{
+    "pipeline_tracker_id": "pyWXj3N9eSKMuQPzOwix",
+    "progress": 0.5
+}
+```
 
 ## Tracking Question Creation
 
 `GET https://api.canopy.study/api/pipeline-trackers/{id}/`
 
 Get status updates on a specific request to create questions.
-
-### Response
-
-`id` <Badge type="info" text="string" />
-
-The identifier for requesting updates on the progress of creating questions.
-
-`progress` <Badge type="info" text="float" />
-
-A number between `0.0` and `1.0`, representing the completion of creating questions. `1.0` represents a successful completion, where-as `-1.0` represents a failure to create questions.
 
 #### Example
 
@@ -139,20 +138,39 @@ curl https://api.canopy.study/api/pipeline-trackers/BXxbr3aeup5Q2lHNWmM4/ \
   -H 'Content-Type: application/json'
 ```
 
+### Response
+
+`id` <Badge type="info" text="string" />
+
+The identifier for requesting updates on the progress of creating questions.
+
+`progress` <Badge type="info" text="float" />
+
+A number between `0.0` and `1.0`, representing the completion of creating questions. `1.0` represents a successful completion, where-as `-1.0` represents a failure to create questions.
+
+#### Example
+
+```json
+{
+    "pipeline_tracker_id": "pyWXj3N9eSKMuQPzOwix",
+    "progress": 0.5
+}
+```
+
 ## Get Created Questions
 
-`GET "https://api.canopy.study/api/questions/?tracker={id}"`
+`GET "https://api.canopy.study/api/questions/?pipeline_tracker_id={id}"`
 
 ### Query Parameters
 
-`tracker` <Badge type="info" text="string" /> | <Badge type="danger" text="Required" />
+`pipeline_tracker_id` <Badge type="info" text="string" /> | <Badge type="danger" text="Required" />
 
-The `id` of a tracker object.
+The `id` of a pipeline tracker object.
 
 #### Example
 
 ```bash
-curl "https://api.canopy.study/api/questions/?tracker=iJjxDerhOSF7AlKpYZyw" \
+curl "https://api.canopy.study/api/questions/?pipeline_tracker_id=iJjxDerhOSF7AlKpYZyw" \
   -X GET \
   -H 'Authorization: Bearer <api-key>' \
   -H 'Canopy-Version: 2022-11-09' \
@@ -162,10 +180,6 @@ curl "https://api.canopy.study/api/questions/?tracker=iJjxDerhOSF7AlKpYZyw" \
 ### Response
 
 A list of questions in the following format:
-
-`id` <Badge type="info" text="string" />
-
-The identifier of a question.
 
 `question` <Badge type="info" text="string" />
 
@@ -178,3 +192,28 @@ The correct answer to the question.
 `distractors` <Badge type="info" text="List[string]" />
 
 A list of incorrect answers. Great for multiple choice questions.
+
+#### Example
+
+```json
+[
+    {
+        "question": "True crows belong to what group?",
+        "answer": "The answer, but clean",
+        "distractors": [
+            "Verbal responses are made to verbal stimuli",
+            "A familiar response is associated with a new stimulus",
+            "Individual associations are linked together in sequence"
+        ]
+    },
+    {
+        "question": "True crows belong to what group?",
+        "answer": "The answer, but clean",
+        "distractors": [
+            "Verbal responses are made to verbal stimuli",
+            "A familiar response is associated with a new stimulus",
+            "Individual associations are linked together in sequence"
+        ]
+    }
+]
+```
