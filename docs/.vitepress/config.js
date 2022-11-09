@@ -1,39 +1,31 @@
 export default {
   title: "Canopy Study API Docs",
-  description:
-    "Canopy Study v3.2.41 API documentation with instant search, offline support, keyboard shortcuts, mobile version, and more.",
+  description: "Canopy Study API documentation.",
   lastUpdated: true,
   markdown: {
     theme: "material-palenight",
-    lineNumbers: true,
   },
   themeConfig: {
-    logo: "/logo.svg",
-    nav: [
-      { text: "Web app", link: "https://app.canopy.study" },
-      { text: "Configs", link: "/configs" },
-      { text: "Changelog", link: "/changelog" },
-    ],
+    siteTitle: false,
+    // logo: "/assets/logo.svg",
+    nav: [{ text: "app.canopy.study", link: "https://app.canopy.study" }],
     sidebar: [
-      {
-        text: "Get Started",
-        items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
-      {
-        text: "API Reference",
-        items: [
-          { text: "Introduction", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
+      // {
+      //   text: "API Reference",
+      //   items: [{ text: "All The Things", link: "/all-the-things" }],
+      // },
     ],
     footer: {
       copyright: "Copyright © 2022 Canopy Study Pty Ltd",
     },
-    socialLinks: [{ icon: "twitter", link: "https://twitter.com/canopystudy" }],
+    socialLinks: [
+      {
+        icon: "linkedin",
+        link: "https://www.linkedin.com/company/canopystudy/",
+      },
+      { icon: "twitter", link: "https://twitter.com/canopystudy" },
+      { icon: "instagram", link: "https://www.instagram.com/canopystudy/" },
+    ],
     lastUpdatedText: "Updated Date",
   },
 };
