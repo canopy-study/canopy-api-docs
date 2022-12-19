@@ -1,5 +1,7 @@
 # Canopy Study API Docs
 
+WARNING: This page is slightly out of date. Please use the following link instead: [Canopy Study API Docs](https://canopystudy.notion.site/External-API-Documentation-23ac2ec94b9d46f8ab0b6dedbcbeee20)
+
 ## Authentication
 
 Authentication to the API is performed via bearer auth. Use the `-H 'Authorization: Bearer <api-key>'`.
